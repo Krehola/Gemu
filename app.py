@@ -34,6 +34,17 @@ def add():
     }
     return render_template('add.html', data=data)
 
+@app.route('/about')
+def about():
+    data = {
+    }
+    return render_template('about.html', data=data)
+
+@app.route('/acc')
+def acc():
+    data = {
+    }
+    return render_template('acc.html', data=data)
 
 
 
