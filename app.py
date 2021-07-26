@@ -20,3 +20,20 @@ def index():
     data = {
     }
     return render_template('index.html', data=data)
+
+
+@app.route('/games')
+def games():
+    data = {
+    }
+    return render_template('games.html', data=data)
+
+@app.route('/add')
+def add():
+    data = {
+    }
+    return render_template('add.html', data=data)
+
+
+
+
