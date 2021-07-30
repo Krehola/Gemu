@@ -15,25 +15,32 @@
     </embed>
     <header>
         <div class="container">
-            <h1 class="logo">Gemu - ゲーム </h1>
+            <h1 class="logo">Gēmu - ゲーム </h1>
             <h5 class="logo">(Gaming made right) </h5> 
         <nav>
             <ul>
                 <li><a href="{{url_for('index')}}">Home</a></li>
                 <li><a href="{{url_for('games')}}">Games</a></li>
-                <li><a href="{{url_for('add')}}">Add</a></li>    
-                <li><a href="{{url_for('about')}}">About Us</a></li>
-                <li><a href="{{url_for('signup')}}">Sign up</a></li> 
-                {% if session["username"]%}
-                <li><a href="{{url_for('logout')}}">Logout</a></li> 
-                {%else %}
-                <li><a href="{{url_for('login')}}">Login</a></li>
-                {%endif%}
-                <li>{{session["username"]}}</li>
+                <li><a href="{{url_for('add')}}">Add</a></li>
                 <li><a href="{{url_for('acc')}}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                    </svg></a></li>           
+                    </svg></a></li>      
+                   <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">Welcome Gamer 🎮
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button"><a href="{{url_for('login')}}">Sign Up </a></button></li>
+                    {% if session["username"]%}         
+                    <li><button class="dropdown-item" type="button"><a href="{{url_for('logout')}}">Logout</a></button></li>
+                    {%else %}                    
+                    <li><button class="dropdown-item" type="button"><a href="{{url_for('signup')}}">Log in</a></button></li>
+                    {%endif%}
+                    <li><button class="dropdown-item" type="button">{{session["username"]}}
+                    </button></li>
+                    <li><button class="dropdown-item" type="button"><a href="{{url_for('about')}}">About Us</a></button></li>
+                    </ul>
+                    </div>   
             </ul>            
         </nav>
         </div>
