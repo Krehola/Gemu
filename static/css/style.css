@@ -171,3 +171,20 @@ img
     margin-bottom: 50px;
 }
 
+.vid
+{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+#part 
+{
+    display: block;
+    margin-left: 3.5%;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
