@@ -1,5 +1,3 @@
-# Flask Final Project Starter Template
-## Directions
 1. Log into GitHub and click the `Use this template` button
 2. Name your new repository with a descriptive name
 3. In Cloudshell, `git clone` with your repo's link
